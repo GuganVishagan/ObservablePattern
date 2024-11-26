@@ -1,13 +1,11 @@
 package org.observablePattern.Observable;
 
-
 import org.observablePattern.Observer.NotificationObserver;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class IphoneObservable implements StockObservable {
-
+public class AndroidObservable implements StockObservable{
     public List<NotificationObserver> observerList = new ArrayList<>();
     public int stockCount = 0;
 
@@ -23,8 +21,9 @@ public class IphoneObservable implements StockObservable {
 
     @Override
     public void setStockCount(int newStockAdded) {
-        if(stockCount == 0)
+        if(stockCount == 0){
             notifyObservers();
+        }
         stockCount += newStockAdded;
     }
 

@@ -1,4 +1,5 @@
 package org.observablePattern.Observer;
 
-public class NotificationObserver {
+public interface NotificationObserver {
+    public void update();
 }
